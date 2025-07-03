@@ -52,7 +52,7 @@ nisa-phone/
 1. **Kloning repositori:**
 
    ```bash
-   git clone https://github.com/matteusmoreno/nisa-phone.git
+   git clone https://github.com/cacaanisa/nisa-phone.git
    cd nisa-phone
    ```
 
