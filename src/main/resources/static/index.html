@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasbor Nisa Phone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📱 Dasbor Nisa Phone</h1>
+
+    <div class="tab-container">
+        <button class="tab-button active" data-tab="customers-content">Kelola Pelanggan</button>
+        <button class="tab-button" data-tab="products-content">Kelola Produk</button>
+        <button class="tab-button" data-tab="sales-content">Catat Penjualan</button>
+    </div>
+
+    <div class="tab-content-wrapper">
+
+        <div id="customers-content" class="tab-content active">
+            <h2>Kelola Pelanggan</h2>
+            <div class="form-container">
+                <form id="customer-form">
+                    <div class="form-group">
+                        <label for="customer-name">Nama Pelanggan:</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Nomor Telepon:</label>
+                        <input type="text" id="customer-phone" placeholder="(Opsional)">
+                    </div>
+                    <button type="submit">Tambah Pelanggan</button>
+                </form>
+            </div>
+            <h3>Daftar Pelanggan</h3>
+            <table id="customers-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Telepon</th>
+                    <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody id="customers-table-body"></tbody>
+            </table>
+        </div>
+
+        <div id="products-content" class="tab-content">
+            <h2>Kelola Produk</h2>
+            <div class="form-container">
+                <form id="product-form">
+                    <div class="form-group">
+                        <label for="product-name">Nama Produk:</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Harga:</label>
+                        <input type="number" step="0.01" id="product-price" placeholder="Contoh: 1500000" required>
+                    </div>
+                    <button type="submit">Tambah Produk</button>
+                </form>
+            </div>
+            <h3>Daftar Produk</h3>
+            <table id="products-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody id="products-table-body"></tbody>
+            </table>
+        </div>
+
+        <div id="sales-content" class="tab-content">
+            <h2>Catat Penjualan Baru</h2>
+            <div class="form-container">
+                <form id="sale-form">
+                    <div class="form-group">
+                        <label for="sale-customer">Pilih Pelanggan:</label>
+                        <select id="sale-customer" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sale-products">Pilih Produk (tahan Ctrl atau Cmd):</label>
+                        <select id="sale-products" multiple required size="5"></select>
+                    </div>
+                    <button type="submit">Catat Penjualan</button>
+                </form>
+            </div>
+            <h3>Riwayat Penjualan</h3>
+            <table id="sales-table">
+                <thead>
+                <tr>
+                    <th>ID Penjualan</th>
+                    <th>Pelanggan</th>
+                    <th>Produk</th>
+                    <th>Total Harga</th>
+                    <th>Tanggal</th>
+                    <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody id="sales-table-body"></tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
