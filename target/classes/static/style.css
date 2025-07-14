@@ -1,0 +1,167 @@
+/* --- TEMA ESCURO (CHARCOAL) E ESTILO GERAL --- */
+:root {
+    --background-darkest: #1e1e1e;
+    --background-dark: #2d2d2d;
+    --background-light: #3a3a3a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-color: #007acc;
+    --accent-hover: #005a9e;
+    --delete-color: #c94040;
+    --delete-hover: #a12b2b;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-darkest);
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--background-dark);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--background-light);
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--background-light);
+    padding-bottom: 10px;
+}
+
+/* --- ESTILO DAS ABAS --- */
+.tab-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: var(--background-light);
+    color: #ffffff;
+}
+
+.tab-button.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FORMULÁRIOS NO TEMA ESCURO --- */
+.form-container {
+    background-color: #252526;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    border: 1px solid var(--background-light);
+}
+
+label {
+    color: var(--text-primary);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--background-light);
+    border-radius: 4px;
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- TABELAS NO TEMA ESCURO --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--background-light);
+}
+
+thead th {
+    background-color: #333;
+    color: var(--text-primary);
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: var(--background-light);
+}
+
+.delete-btn {
+    background-color: var(--delete-color);
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-hover);
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
